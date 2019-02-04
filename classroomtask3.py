@@ -18,6 +18,15 @@ class Card(object):
 		t1 = (self.suit, self.rank)
 		t2 = (other.suit, other.rank)
 		return t1 < t2
+	def __gt__(self, other):
+		t1 = (self.suit, self.rank)
+		t2 = (other.suit, other.rank)
+		return t1 > t2
+
+	def __eq__(self, other):
+		t1 = (self.suit, self.rank)
+		t2 = (other.suit, other.rank)
+		return t1 == t2
 
 card1 = Card(5,3)
 card2 = Card(6,3)
